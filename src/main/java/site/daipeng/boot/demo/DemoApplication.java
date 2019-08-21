@@ -7,7 +7,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DemoApplication {
 
     public static void main(String[] args) {
+
+
+        System.err.println("app start"+Thread.currentThread().getId());
+
         SpringApplication.run(DemoApplication.class, args);
+
+        System.err.println("app end"+Thread.currentThread().getId());
+
+
     }
 
 }
