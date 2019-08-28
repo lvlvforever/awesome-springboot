@@ -6,9 +6,18 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class TaskSchedule {
+    @Scheduled(initialDelay = 10,fixedRate = 1000)
+    public void taskFixRate() throws Exception{
+        System.err.println("fix rate "+Thread.currentThread().getId()+ " " + System.currentTimeMillis());
 
-    @Scheduled(cron = "1/10 * * * * *")
-    public void task() {
-        System.err.println(System.currentTimeMillis() + "task");
+        Thread.sleep(500);
+
+    }
+    @Scheduled(fixedDelay = 1000)
+    public void taskFixDelay() throws Exception{
+        System.err.println("fix delay "+Thread.currentThread().getId()+ " " + System.currentTimeMillis());
+
+        Thread.sleep(10000);
+
     }
 }
