@@ -16,7 +16,7 @@ public class RepairRunner implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
         //TODO 业务逻辑
-        System.err.println("i am repair runner"+Thread.currentThread().getId());
+//        System.err.println("i am repair runner"+Thread.currentThread().getId());
 
     }
 }
