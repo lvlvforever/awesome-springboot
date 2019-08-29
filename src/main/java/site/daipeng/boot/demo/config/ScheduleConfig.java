@@ -62,7 +62,6 @@ public class ScheduleConfig implements SchedulingConfigurer {
         taskScheduler.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy());
         taskScheduler.setWaitForTasksToCompleteOnShutdown(true);
         taskScheduler.setAwaitTerminationSeconds(60);
->>>>>>> schedule
 
         return taskScheduler;
     }
