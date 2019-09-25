@@ -25,8 +25,7 @@ public class ScheduleConfig implements SchedulingConfigurer {
         executor.setThreadNamePrefix("yhh-schedule-");
         executor.setPoolSize(100);
         executor.setRejectedExecutionHandler(new ThreadPoolExecutor.AbortPolicy());
-
-
+        executor.initialize();
         scheduledTaskRegistrar.setScheduler(executor);
 
     }

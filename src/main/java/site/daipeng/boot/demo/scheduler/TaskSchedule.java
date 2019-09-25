@@ -8,8 +8,6 @@ import org.springframework.stereotype.Component;
 public class TaskSchedule {
     @Scheduled(initialDelay = 10,fixedRate = 1000)
     public void taskFixRate() throws Exception{
-       // System.err.println("fix rate "+Thread.currentThread().getId()+ " " + System.currentTimeMillis());
-
         Thread.sleep(500);
 
     }
