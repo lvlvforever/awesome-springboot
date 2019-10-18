@@ -16,7 +16,7 @@ import javax.websocket.OnError;
 public class TaskRunnerSecond implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
-        System.err.println("i am task runner second"+Thread.currentThread().getId());
+//        System.err.println("i am task runner second"+Thread.currentThread().getId());
 
     }
 }

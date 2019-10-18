@@ -13,12 +13,12 @@ public class TaskSchedule {
     }
     @Scheduled(fixedDelay = 1000)
     public void taskFixDelay() throws Exception{
-        System.err.println("fix delay "+Thread.currentThread().getId()+ " " + System.currentTimeMillis());
+//        System.err.println("fix delay "+Thread.currentThread().getId()+ " " + System.currentTimeMillis());
 
     }
     @Scheduled(cron = "1/5 * * * * *")
     public void taskCron() throws Exception{
-        System.err.println("cron "+Thread.currentThread().getId()+ " " + System.currentTimeMillis());
+//        System.err.println("cron "+Thread.currentThread().getId()+ " " + System.currentTimeMillis());
 
     }
 }

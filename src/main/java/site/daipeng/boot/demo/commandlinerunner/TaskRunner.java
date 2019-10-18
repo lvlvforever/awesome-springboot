@@ -1,8 +1,11 @@
 package site.daipeng.boot.demo.commandlinerunner;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.annotation.Order;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
+import site.daipeng.boot.demo.scheduler.AsyncTask;
 
 /**
  * @author daipeng
@@ -12,9 +15,12 @@ import org.springframework.stereotype.Component;
 @Component
 @Order(1)
 public class TaskRunner implements CommandLineRunner {
+    @Autowired
+    private AsyncTask asyncTask;
     @Override
     public void run(String... args) throws Exception {
-        System.err.println("i am task runner"+Thread.currentThread().getId());
+        asyncTask.asyncTask1();
+        asyncTask.asyncTask2();
 
     }
 }
